@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sécurité : seuls les scripts du site sont autorisés, sans eval ni script inline. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <!-- Demande aux robots de ne pas indexer, archiver ni réutiliser la page (y compris pour l'IA). -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai" />
+    <title>Faycel Marsit — Développeur Java-JEE / Angular</title>
+    <meta
+      name="description"
+      content="Faycel Marsit, ingénieur logiciel Java-JEE / Angular basé à Niort. Plus de 6 ans d'expérience en développement d'applications web, assurance et finance."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <nav>
+      <div class="logo mono">FM<span>.</span>dev</div>
+      <ul>
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#projects">Réalisations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- ACCUEIL -->
+      <section id="hero">
+        <div class="wrap">
+          <p class="tag mono">&gt; Niort, France</p>
+          <h1>Faycel<br />Marsit</h1>
+          <p class="role">
+            Ingénieur logiciel <b id="typed"></b
+            ><span class="caret">&nbsp;</span>
+          </p>
+          <div class="stats" id="stats"></div>
+          <div class="cta">
+            <a class="btn primary" href="#experience">Mon parcours</a>
+            <a class="btn" href="https://www.linkedin.com/in/marsit-faycel" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="scroll-hint mono">scroll ↓</div>
+      </section>
+
+      <!-- PROFIL -->
+      <section id="about">
+        <div class="wrap">
+          <h2 class="reveal"><span class="num mono">01</span>Profil</h2>
+          <div class="about-grid">
+            <div class="glass about-text reveal">
+              <p>
+                Ingénieur informatique <em>spécialité IT-finance</em> (Bac+5),
+                je conçois et fais évoluer des applications web d'entreprise en
+                <em>Java-JEE / Spring</em> côté serveur et
+                <em>Angular / React</em> côté client.
+              </p>
+              <p>
+                Depuis 2020, j'ai travaillé dans l'<em>assurance</em> (gestion
+                des sinistres IARD, standards DARVA), le <em>recrutement</em> et
+                l'<em>évaluation des compétences</em>, en France et en Tunisie,
+                au sein d'équipes Agile — y compris en environnement anglophone.
+              </p>
+              <p>
+                J'intègre aussi l'<em>IA générative</em> dans mes projets et mon
+                quotidien : API OpenAI Assistant, GitHub Copilot, ChatGPT,
+                Claude.
+              </p>
+            </div>
+            <div class="glass facts reveal">
+              <div class="fact">
+                <span class="mono">Formation</span
+                ><b>Ingénieur informatique, IT-finance</b
+                ><small>École PI · Bac+5</small>
+              </div>
+              <div class="fact">
+                <span class="mono">Certification</span
+                ><b>Oracle Certified Associate</b
+                ><small>Java SE 8 Programmer</small>
+              </div>
+              <div class="fact">
+                <span class="mono">Langues</span><b>Français · Anglais</b
+                ><small>Cérémonies Agile en anglais</small>
+              </div>
+              <div class="fact">
+                <span class="mono">Méthodes</span><b>Scrum / Agile</b
+                ><small>Daily, Sprint Planning, Review, Rétro</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPÉTENCES -->
+      <section id="skills">
+        <div class="wrap">
+          <h2 class="reveal"><span class="num mono">02</span>Compétences</h2>
+          <div class="skills-grid" id="skills-list"></div>
+        </div>
+      </section>
+
+      <!-- EXPÉRIENCE -->
+      <section id="experience">
+        <div class="wrap">
+          <h2 class="reveal"><span class="num mono">03</span>Expérience</h2>
+          <div class="timeline" id="xp-list"></div>
+        </div>
+      </section>
+
+      <!-- RÉALISATIONS -->
+      <section id="projects">
+        <div class="wrap">
+          <h2 class="reveal"><span class="num mono">04</span>Réalisations</h2>
+          <div class="projects" id="project-list"></div>
+          <h3 class="side-title reveal mono">
+            // projets personnels sur GitHub
+          </h3>
+          <div class="side-projects reveal" id="side-list"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="wrap">
+          <h2 class="reveal">
+            <span class="num mono">05</span>Travaillons ensemble
+          </h2>
+          <p class="reveal">
+            Un poste, une mission ou un projet Java / Angular ? Je suis basé à
+            Niort et ouvert aux opportunités.
+          </p>
+          <div class="cta reveal">
+            <a class="btn primary" id="mail" href="#">M'écrire</a>
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/marsit-faycel"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a
+              class="btn"
+              href="https://github.com/MarsitFaycel"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mono">
+      © <span id="year"></span> Faycel Marsit — construit avec Claude & Three.js
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

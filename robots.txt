@@ -1,0 +1,21 @@
+# Interdit l'exploration de tout le site à tous les robots
+# (moteurs de recherche, robots d'IA, collecteurs de données).
+User-agent: *
+Disallow: /
+
+# Robots d'IA cités explicitement, au cas où ils ignoreraient la règle générale.
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: PerplexityBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+Disallow: /
